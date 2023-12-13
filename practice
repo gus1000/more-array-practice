@@ -1,0 +1,165 @@
+// const roadmap = [
+//   {
+//     projectName: "appleClone",
+//     projectURL: "www.google.com",
+//     estimatedTime: "5 days",
+//     dateStarted: " 6-30-2999",
+//     timeSpent: "1 hour"
+//   },
+//   {
+//     projectName: "Figtrend",
+//     projectURL: "www.google.com",
+//     estimatedTime: "11 days",
+//     dateStarted: "07-54-32",
+//     timeSpent: "5 hours"
+//   },
+
+//   {
+//     projectName: "Furni",
+//     projectURL: "www.google.com",
+//     estimatedTime: "11 days",
+//     dateStarted: "9-9-2022",
+//     timeSpent: "15 day"
+//   }
+// ];
+
+// const table = document.querySelector("table")
+
+
+// function createTD(string) {
+  
+//   const td = document.createElement("td");
+//   td.innerText = string;
+//   return td;
+  
+  
+  
+  
+  
+  
+// }
+
+// function _(type) {
+//   return document.createElement(type);
+  
+// }
+
+
+
+// roadmap.forEach(el => {
+
+  
+//   const tr = _("tr");
+//   const tdName = createTD(el.projectName);
+//   const tdURL = createTD(el.projectURL);
+//   const tdEstimatedTime = createTD(el.estimatedTime);
+//   const tdDateStarted = createTD(el.dateStarted);
+//   const tdTimeSpent = createTD(el.timeSpent);
+//         table.appendChild(tr)
+
+    
+
+//   tr.appendChild(tdName);
+//   tr.appendChild(tdURL);
+//   tr.appendChild(tdEstimatedTime);
+//   tr.appendChild(tdDateStarted);
+//   tr.appendChild(tdTimeSpent);
+
+  
+  
+  
+  
+// })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // const table = document.querySelector("table");
+
+// // function _(type) {
+// //   return document.createElement(type);
+// // }
+
+// // function createTD(string) {
+// //   const td = _("td");
+// //   td.innerText = string;
+
+// //   return td;
+// // }
+
+// // roadmap.forEach((el) => {
+// //   const tr = _("tr");
+// //   const tdName = createTD(el.projectName);
+// //   const tdURL = createTD(el.projectURL);
+
+// //   //
+// //   const tdesimatedTime = createTD(el.estimatedTime);
+// //   const tddateStarted = createTD(el.dateStarted);
+// //   const tdtimeSpent = createTD(el.timeSpent);
+
+// //   //
+
+// //   tr.appendChild(tdName);
+// //   tr.appendChild(tdURL);
+// //   tr.appendChild(tdesimatedTime);
+// //   tr.appendChild(tddateStarted);
+// //   tr.appendChild(tdtimeSpent);
+
+// //   table.appendChild(tr);
+// // });
+
+
+
+console.clear();
+const person = {
+  name: "Cristian",
+  age: 29, 
+  profession: "developer"
+}
+
+// console.log(Object.values(person));
+// console.log(Object.entries(person))
+
+
+const keysList = document.querySelector(".keys");
+const valuesList = document.querySelector(".values");
+const entriesList = document.querySelector(".entries")
+
+const keys = Object.keys(person);
+const values = Object.values(person);
+const entries = Object.entries(person);
+
+keys.forEach(function(key){
+  const value = person[key]
+  keysList.innerHTML += `<li>${key} - ${value}</li>`
+});
+
+values.forEach(function(value){
+  valuesList.innerHTML += `<li>${value}`
+});
+
+
+
+entries.forEach(function (entry) {
+  const [key, value] = entry;
+ 
+  console.log("hi",key);
+  console.log("yo", value)
+  entriesList.innerHTML += `<li><span>${key} </span><span>${value} </span></li>`;
+});
+
+
+// entries.forEach(function (entry) {
+//   entriesList.innerHTML += `<li>${entry}</li>`;
+// });
