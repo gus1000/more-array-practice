@@ -1,20 +1,152 @@
-<!-- <ul></ul>
+console.clear();
+const table = document.querySelector("table");
+const trHead = document.querySelector(".tr-head");
+const roadmap = [
+  {
+    projectName: "Apple Clone",
+    projectURL: "www.google.com",
+    estimatedTime: "10 days",
+    dateStarted: "1.1.2023",
+    dateCompleted: "5.1.2023",
+    timeSpent: "5"
+  },
+  {
+    projectName: "Figtrend",
+    projectURL: "www.google.com",
+    estimatedTime: "20 days",
+    dateStarted: "5.1.2023",
+    dateCompleted: "15.1.2023",
+    timeSpent: "10"
+  },
+  {
+    projectName: "Furni",
+    projectURL: "www.google.com",
+    estimatedTime: "25 days",
+    dateStarted: "15.1.2023",
+    dateCompleted: "29.1.2023",
+    timeSpent: "14"
+  }
+];
 
-<table>
-  <tr>
-    <th>Project Name</th>
-    <th>Project URL</th>
-    <th>Estimated Time</th>
-    <th>Date Started</th>
-    <th>Time Spent</th>
- 
-   
-  </tr>
+function splitAndUppercaseWords(string) {
+  const newText = string
+    .replace(/([a-z])([A-Z])/g, "$1 $2")
+    .replace(/([A-Z])([a-z])/g, " $1$2")
+    .replace(/\ +/g, " ");
+  const nextString = newText[0].toUpperCase() + newText.slice(1);
+  return nextString;
+}
+
+function createType(type) {
+  return document.createElement(type);
+}
+
+function createTD(string) {
+  
+  console.log(string);
+  
+  const td = document.createElement("td");
+  
+  td.innerText = string;
+  return td;
+  
+  
+  
+}
+
+
+
+
+
+
+const projectData = Object.values(roadmap);
+console.log(projectData[0])
+// const keys = Object.keys(projectData[0]);
+// console.log(keys);
+
+
+
+
+
+
+// projectData.forEach((project , i) => { 
+  
+
+//   const keys = Object.keys(project);
+//   const values = Object.values(project);
+//    const tr = createType("tr");
+//   // const header = createHeader("th" , keys[i]);
+//   // tr.appendChild(header);
+//   // const th = createType("th");
+//   // th.innerText = keys[i];
+//   // tr.appendChild(th);
+  
+  
+
+//   // console.log("so", keys[i]);
+
   
  
-</table> -->
+ 
 
+//   // console.log("hi", projectData[i])
+  
+  
+//   // console.log(values);
+  
+//   // console.log(keys);
+  
+//   keys.forEach((key, index) => {
+//     // console.log(key ,values[index]);
+    
+//     console.log("hey",key);
+//     const category = splitAndUppercaseWords(key);
+//     const data = splitAndUppercaseWords(values[index]);
+//     const newString = `${values[index]}`;
+//     const td = createTD(newString);
+    
+    
+//     tr.appendChild(td);
+//     table.appendChild(tr)
+    
+    
+//   })
+  
+//    //["projectName","projectURL","estimatedTime","dateStarted","dateCompleted","timeSpent"]
 
-<ul class="keys"></ul>
-<ul class="values"></ul>
-<ul class="entries"></ul>
+  
+// //   
+ 
+// //   
+  
+// //   newString = `${category} - ${data}`;
+  
+// //   const td = createTD(newString);
+// //   table.appendChild(tr);
+// //   tr.appendChild(td);
+  
+
+  
+  
+
+ 
+  
+// //   keys.forEach((element, i) => {
+// //     console.log(element);
+    
+    
+//   })
+
+ 
+  
+  
+  
+  
+   
+  
+  
+  
+  
+  
+
+  
